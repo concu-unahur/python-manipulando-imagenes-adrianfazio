@@ -1,6 +1,7 @@
 import numpy as np
 from PIL import Image
 from archivos import leer_imagen, escribir_imagen
+from api import PixabayAPI
 
 
 def concatenar_horizontal(imagenes):
@@ -13,6 +14,8 @@ def concatenar_vertical(imagenes):
 
 imagen1 = leer_imagen('1.jpg')
 imagen2 = leer_imagen('2.jpg')
+imagen3 = leer_imagen('3.jpg')
+imagen4 = leer_imagen('4.jpg')
 
-escribir_imagen('concatenada-vertical.jpg', concatenar_vertical([imagen1, imagen2]))    
-escribir_imagen('concatenada-horizontal.jpg', concatenar_horizontal([imagen1, imagen2]))    
+escribir_imagen('concatenada-vertical.jpg', concatenar_vertical([imagen1, imagen2,imagen3, imagen4]))    
+escribir_imagen('concatenada-horizontal.jpg', concatenar_horizontal([imagen1, imagen2, imagen3, imagen4]))    
